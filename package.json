@@ -1,17 +1,42 @@
 {
   "name": "coding-desktop-musik",
   "version": "1.0.0",
-  "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "concurrently -k \"cross-env BROWSER=none vite\" \"wait-on tcp:5173 && electron .\"",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "electron": "^39.1.2"
-  }
+    "electron": "^39.6.0"
+  },
+  "dependencies": {
+    "@fontsource/outfit": "^5.2.8",
+    "@vitejs/plugin-react": "^5.1.4",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.3.1",
+    "lucide-react": "^0.564.0",
+    "music-metadata": "^11.12.0",
+    "pg": "^8.18.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "typeface-inter": "^3.18.1",
+    "typeface-roboto": "^1.1.13",
+    "vite": "^7.3.1",
+    "wait-on": "^9.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArkanFzi/App-Desktop-Music.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ArkanFzi/App-Desktop-Music/issues"
+  },
+  "homepage": "https://github.com/ArkanFzi/App-Desktop-Music#readme",
+  "description": ""
 }
